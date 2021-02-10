@@ -23,9 +23,9 @@ class OrdersRepository implements IOrdersRepository {
   }
 
   public async findById(id: string): Promise<Order | undefined> {
-    const findOrder = await this.ormRepository.findOne(id);
+    const order = await this.ormRepository.findOne(id);
 
-    return findOrder;
+    return order;
   }
 }
 
